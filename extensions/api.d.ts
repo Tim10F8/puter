@@ -12,7 +12,7 @@ import type { IUser } from '@heyputer/backend/src/services/User.js';
 import type { UserService } from '@heyputer/backend/src/services/UserService.d.ts';
 import { Context } from '@heyputer/backend/src/util/context.js';
 import type { RequestHandler } from 'express';
-import { Cluster } from 'ioredis';
+import type { Cluster } from 'ioredis';
 import type FSNodeContext from '../src/backend/src/filesystem/FSNodeContext.js';
 import type helpers from '../src/backend/src/helpers.js';
 import type * as ExtensionControllerExports from './ExtensionController/src/ExtensionController.ts';
@@ -32,6 +32,8 @@ declare global {
         }
     }
 }
+
+export type { Cluster } from 'ioredis';
 
 interface EndpointOptions {
     allowedMethods?: string[];
